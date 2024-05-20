@@ -16,6 +16,8 @@
 
 tmp/
 
+.idea/
+
 # Go workspace file
 go.work
 
@@ -24,3 +26,7 @@ internal/frontend/node_modules/
 
 # tls
 tls/
+
+*.env
+
+frontend .js.tmp*
