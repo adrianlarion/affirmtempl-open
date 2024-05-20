@@ -30,3 +30,5 @@ tls/
 *.env
 
 frontend .js.tmp*
+
+log/
