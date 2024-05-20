@@ -1,0 +1,270 @@
+//custom font
+@use "sass:map";
+
+
+
+//min width for body
+body{
+    min-width:370px;
+}
+
+//radial gradient background
+html{
+    min-height:100%;
+    // background: radial-gradient(circle,$appcolor-grad-b,$appcolor-grad-a);
+    // background: linear-gradient(map.get($appcolor, "grad-a"),map.get($appcolor, "grad-b"));
+    // background: linear-gradient(map.get($appcolor, "grad-a"),map.get($appcolor, "grad-b"),map.get($appcolor, "grad-a"));
+    // background: linear-gradient(0deg,  map.get($appcolor, "grad-a") 0%, map.get($appcolor, "grad-b") 58%, map.get($appcolor, "grad-b") 64%, map.get($appcolor, "grad-a") 100%);
+
+    background-image:url("/static/img/fantasylandscape.jpg");
+    background-position:top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    // height:100vh;
+}
+
+
+
+//remove color from navbar
+nav{
+    background-color:rgba(0,0,0,0);
+      @extend .z-depth-0;
+      margin-top: 0.85rem;
+}
+//add margin to logo
+.brand-logo{
+    margin-top:0.45rem;
+    margin-left:1rem;
+}
+
+// fix sidenav buttons look 
+.sidenav li > a.btn-small{
+    padding-left: 30px;
+}
+.sidenav li > a > i.material-icons {
+    
+    margin-right:100px;
+}
+
+//center card icons
+.card-icon {
+    margin: auto;
+    display: block;
+}
+
+//cards layout
+//home header layout
+//background styling
+@include card-styling("large");
+@include home-header-styling("large");
+@include home-backimg-styling("large");
+@include affirm-text-styling("large3");
+
+@media only screen and (min-width : 100px) and (max-width : 500px) {
+    @include card-styling("small");
+    @include home-header-styling("small");
+    @include home-backimg-styling("small");
+    @include affirm-text-styling("small");
+}
+
+@media only screen and (min-width : 500px) and (max-width : 1000px) {
+    @include card-styling("medium");
+    @include home-header-styling("medium");
+    @include home-backimg-styling("medium");
+    @include affirm-text-styling("medium");
+}
+
+@media only screen and (min-width : 1000px) and (max-width : 1500px) {
+    @include affirm-text-styling("large");
+}
+
+@media only screen and (min-width : 1500px) and (max-width : 2000px) {
+    @include affirm-text-styling("large2");
+}
+@media only screen and (min-width : 2000px) and (max-width : 3000px) {
+    @include affirm-text-styling("large3");
+}
+
+//spacing to the main
+main{
+    // margin-top:5rem;
+}
+
+//player -  add a bit of margin
+.app-player-back-nav {
+      position:absolute;
+      left: 50%;
+      top: 5%;
+      -webkit-transform: translate(-50%, -5%);
+      transform: translate(-50%, -5%);
+}
+
+//player - make affirm text centered
+.app-player-affirm-container{
+      position:absolute;
+      left: 50%;
+      top: 40%;
+      -webkit-transform: translate(-50%, -40%);
+      transform: translate(-50%, -40%);
+  
+      width:80%;
+
+      word-wrap: break-word;      /* IE 5.5-7 */
+      white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+      white-space: pre-wrap;      /* current browsers */
+}
+//player - style affirm text
+.app-affirm-text{
+    font-weight:bold;
+    
+}
+//player favorite button position
+.app-player-affirm-footer{
+    // margin-top:60%;
+    position:absolute;
+      left: 50%;
+      top: 95%;
+      -webkit-transform: translate(-50%, -95%);
+      transform: translate(-50%, -95%);
+}
+//modal settings back color and font color
+.modal{
+    background-color:map.get($appcolor, "grad-a");
+}
+.modal .modal-footer{
+    background-color:map.get($appcolor, "grad-a");
+}
+
+//modal label
+.modal-label{
+    margin-bottom:0;
+    margin-top:0;
+    font-size: $app-font-size-large;
+}
+//modal left right padding for ok, reset buttons
+.modal .modal-footer{
+    padding-right:25px;
+    padding-left:25px;
+}
+// select items color should be default color
+.select-wrapper input.select-dropdown{
+    color:map.get($appcolor, "type-dark");
+}
+.dropdown-content{
+    background-color:map.get($appcolor, "grad-a");
+}
+//text area text color is colored properly
+textarea.materialize-textarea{
+    color:map.get($appcolor, "type-dark");
+}
+
+//by default turn the player visibility off
+#app-home-player{
+    display:none;
+}
+
+//disable text selection on affirmations text in player
+#app-home-player{
+    -webkit-user-select:none;
+}
+
+//disable text selection on affirmations text on card
+.card{
+    -webkit-user-select:none;
+}
+//card opacity
+.card {
+     opacity:0.9;
+}
+//fix bug where card action doesn't properly inherit transparency from card and is opaque
+.card .card-action{
+    background-color:rgba(0,0,0,0)
+}
+
+//loading spinner overlay
+#cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    // background-color: rgba(255,255,255,0.7);
+    background-color:map.get($appcolor, "grad-a-transp");
+    z-index:9999;
+    display:none;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:80px;height:80px;
+    border-style:solid;
+    border-color:map.get($appcolor, "type-dark-transp");
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+
+//modal error styling
+img.modal-error-img{
+    margin:auto;
+    display:block;
+    width:150px;
+}
+
+//login modal styling
+img.modal-login-img{
+    width:200px;
+    // margin:auto;
+    display:block;
+}
+div#google_signin_button{
+    // margin:auto;
+    width:50%;
+}
+
+//text area padding insuficient on mobile fix
+textarea.materialize-textarea{
+    padding-bottom:2rem;
+}
+
+//card color
+.card-main{
+    background: linear-gradient(map.get($appcolor, "card-main-grad-a"),map.get($appcolor, "card-main-grad-b"),map.get($appcolor, "card-main-grad-a"));
+    // background: radial-gradient(circle,map.get($appcolor, "grad-b"),map.get($appcolor, "grad-a"));
+}
+
+.card-fav{
+    background: linear-gradient(map.get($appcolor, "card-fav-grad-a"),map.get($appcolor, "card-fav-grad-b"),map.get($appcolor, "card-fav-grad-a"));
+}
+
+
+//footer
+div.footer-links{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+div.footer-links a{
+    font-size: $app-font-size-large;
+}
+
+div.legal-text{
+white-space:pre-line;    
+font-size: $app-font-size-large;
+}

@@ -1,0 +1,43 @@
+package section
+import(
+"github.com/adrianlarion/affirmtempl-open/internal/view/component"
+"github.com/adrianlarion/affirmtempl-open/internal/model"
+"strconv"
+)
+
+func getCardColorClass(fav bool)string{
+        if fav{
+                return "card-fav"
+        }
+        return "card-main"
+}
+
+func getCardId(id int64) string{
+        res := strconv.FormatInt(id,10)
+        return res
+}
+
+
+templ Cards(splitCards []model.TwoCards){
+                for _, card := range splitCards{
+                        <div class="row">
+                                if card.One != nil{
+                                        <div class="col s6 ">
+                                        @component.Card("left",card.One.Title,card.One.ImgPath, getCardColorClass(card.One.Fav),getCardId(card.One.ID),card.One.Fav)
+                                        </div>
+
+                                }
+                                
+                                if card.Two != nil{
+                                        <div class="col s6">
+                                        @component.Card("right",card.Two.Title,card.Two.ImgPath,getCardColorClass(card.Two.Fav),getCardId(card.Two.ID),card.Two.Fav)
+                                        </div>
+                                }
+
+                                
+                        </div>
+
+                }
+                
+
+}

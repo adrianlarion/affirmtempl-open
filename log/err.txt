@@ -1,0 +1,26 @@
+{"level":"debug","message":"haubau"}
+{"level":"debug","message":"haubau"}
+{"level":"debug","message":"my err"}
+{"level":"debug","message":"my err"}
+{"level":"debug","message":"my err"}
+{"level":"debug","message":"my err"}
+{"level":"debug","message":"my err"}
+{"level":"debug","message":"my err salam"}
+{"level":"debug","message":"my err salam"}
+{"level":"debug","message":"my err salam"}
+{"level":"debug","message":"my err salam"}
+{"level":"debug","hau":"bau","message":"my err salam"}
+{"level":"debug","hau":"bau","message":"my err salam"}
+{"level":"debug","remote addr":"[::1]:35072","message":"hau"}
+{"level":"debug","remote addr":"[::1]:49734","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:38592","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:53172","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:52398","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:37694","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:37694","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:37694","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:35066","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:57558","proto":"HTTP/1.1","method":"GET","uri":"/","message":"hauleo"}
+{"level":"debug","remote addr":"[::1]:54068","proto":"HTTP/1.1","method":"GET","uri":"/","message":"tesct err for grafana"}
+{"level":"debug","remote addr":"[::1]:43160","proto":"HTTP/1.1","method":"GET","uri":"/","message":"tesct err for grafana"}
+{"level":"debug","remote addr":"[::1]:43172","proto":"HTTP/1.1","method":"GET","uri":"/","message":"tesct err for grafana"}

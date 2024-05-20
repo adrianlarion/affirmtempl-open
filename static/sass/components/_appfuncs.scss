@@ -1,0 +1,177 @@
+@mixin affirm-text-styling($size:"small"){
+    @if $size == "small"{
+        .app-affirm-text{
+            font-size:25px;
+        }
+
+    } @else if $size == "medium"{
+
+        .app-affirm-text{
+            font-size:30px;
+        }
+
+    } @else if $size == "large"{
+
+        .app-affirm-text{
+            font-size:45px;
+        }
+    } @else if $size == "large2"{
+        .app-affirm-text{
+            font-size:55px;
+        }
+
+    }  @else if $size == "large3"{
+        .app-affirm-text{
+            font-size:65px;
+        }
+
+    }
+
+}
+
+@mixin home-backimg-styling($size:"small"){
+    @if $size == "small"{
+        html{
+            background-size:1000px; }
+
+    } @else if $size == "medium"{
+        html{
+            background-size:1400px;
+        }
+
+
+    } @else if $size == "large"{
+        html{
+            background-size:2048px;
+        }
+
+    }
+}
+
+@mixin home-header-styling($size:"small"){
+    #app-home-header{
+        line-height:1;
+    }
+
+   #app-home-paragraph{
+        line-height:1.5;
+   }
+
+    @if $size == "small"{
+       #app-home-header{
+            margin: 50px 0 0 20px;
+            font-size:$app-font-size-huge;
+            font-weight:bold;
+       } 
+       #app-home-paragraph{
+            font-size:$app-font-size-large;
+            margin-left:25px;
+            margin-top:10px;
+       }
+        header{
+            margin-bottom:50px;
+        }
+
+    } @else if $size == "medium"{
+
+       #app-home-header{
+            margin: 70px 0 0 20px;
+            font-size:$app-font-size-huge;
+            font-weight:bold;
+       } 
+       #app-home-paragraph{
+            font-size:$app-font-size-large;
+            margin-left:25px;
+            margin-top:10px;
+       }
+        header{
+            margin-bottom:70px;
+        }
+
+    } @else if $size == "large"{
+
+       #app-home-header{
+            margin: 100px 0 0 20px;
+            font-size:$app-font-size-grand;
+            font-weight:bold;
+       } 
+       #app-home-paragraph{
+            font-size:$app-font-size-large;
+            margin-left:25px;
+            margin-top:10px;
+       }
+        header{
+            margin-bottom:100px;
+        }
+    }
+}
+
+ @mixin card-styling($size:"small") {
+    .card .card-content .card-title{
+        font-weight:normal;
+        line-height:1;
+
+    }
+    .card.small {
+         width:100%;
+    }
+    .card .card-icon{
+          height:auto;
+          opacity:0.9;
+    }
+    
+     @if $size == "small"{
+        .card .card-content{
+            padding:10px;
+        }
+        .card .card-action{
+            padding:10px;
+        }
+        .card .card-icon{
+            max-width:130px;
+            max-height:130px;
+            margin-bottom:10px;
+        }
+        .card .card-content .card-title{
+            font-size:$app-font-size-large;
+
+        }
+        .card.small {
+            min-width:150px;
+            min-height:250px;
+            max-height: 250px;
+        } 
+    } @else if $size == "medium"{
+        .card .card-action{
+            padding:10px 15px;
+        }
+        .card .card-icon{
+            max-width:160px;
+            max-height:170px;
+            margin-bottom:20px;
+        }
+        .card .card-title{
+            font-size:$app-font-size-large;
+        }
+        .card.small {
+            min-width:200px;
+            min-height:300px;
+            max-height: 280px;
+        } 
+
+     }@else if $size == "large"{
+        .card .card-icon{
+            max-width:200px;
+            max-height:210px;
+            margin-bottom:20px;
+        }
+        .card .card-title{
+            font-size:$app-font-size-very-large;
+        }
+        .card.small {
+            min-width:300px;
+            min-height: 370px;
+        } 
+
+     }
+}

@@ -1,0 +1,65 @@
+package page
+
+import(
+"github.com/adrianlarion/affirmtempl-open/internal/view/component"
+"github.com/adrianlarion/affirmtempl-open/internal/view/section"
+"github.com/adrianlarion/affirmtempl-open/internal/view/layout"
+"github.com/adrianlarion/affirmtempl-open/internal/model"
+)
+
+templ HomeContent(splitCards []model.TwoCards, isLoggedIn bool, userName string){
+        <div id="app-home-content">
+                <header>
+                @section.Header(isLoggedIn,userName)
+                </header>
+
+                <main>
+
+                <section>
+                @section.Cards(splitCards)
+                </section>
+
+                <footer>
+                @section.Footer()
+                </footer>
+                
+                </main>
+        </div>
+}
+
+templ HomePlayer(){
+        <div id="app-home-player">
+                @section.Player()
+        </div>
+}
+
+templ HomeLoader(){
+        <div id="app-home-loader">
+                @section.Loader()
+        </div>
+
+}
+
+templ HomeModals(){
+        <div id="app-home-modals">
+                @component.ModalError()
+                @component.ModalEditAffirm()
+                @component.ModalSettings()
+                @component.ModalLogin()
+        </div>
+
+}
+
+
+
+
+templ Home(splitCards []model.TwoCards, isLoggedIn bool,userName string){
+        @layout.Base(){
+                <div class="container">
+                @HomeModals()
+                @HomeLoader()
+                @HomeContent(splitCards,isLoggedIn,userName)
+                @HomePlayer()
+                </div>
+        }
+    }

@@ -1,0 +1,32 @@
+package component
+
+templ Card(cardFloat , title, imgPath, color , id string , fav bool){
+        
+            <div class={"card small appcolor ", color, cardFloat } data-cardid={ id }>
+
+			<div class="card-content white-text">
+
+                <img class="card-icon" src={ imgPath } alt=""/>
+                <span class="card-title appcolor-text text-type-dark center">{ title }</span>
+                
+            </div>
+
+            //hide fav button on the first favorite card
+            if id != "0"{
+                <div class="card-action">
+
+                if fav{
+                    <a><i class="material-icons appcolor-text text-logo-main-transp left card-fav-btn">favorite</i></a>
+
+                }else{
+                    <a><i class="material-icons appcolor-text text-type-dark-transp left card-fav-btn">favorite_border</i></a>
+
+                }
+
+                <a><i class="material-icons appcolor-text text-type-dark-transp right card-edit-affirm-btn">edit</i></a>
+
+                </div>
+            }
+
+            </div>
+}

@@ -1,0 +1,50 @@
+package layout
+
+import(
+"os"
+)
+
+templ Base(){
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y30F4C4WP2"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-Y30F4C4WP2');
+            </script>
+
+
+
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta http-equiv="X-UA-Compatible" content="ie=edg"/>
+                  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+                <link rel="stylesheet" href="/static/css/materialize.css"/>
+
+                  <script src="/static/js/jquery-3.7.1.min.js"></script>
+                  <script src="/static/js/jquery_plugin/sparkleHover.js"></script>
+		  <script src="/static/js/materialize.min.js"></script>
+
+		  <script src="/static/js/materialize_init.js"></script>
+
+                  if os.Getenv("AFFIRMTEMPL_PROD")=="yes"{
+                    <script src="/static/js/app.min.js"></script>
+                  }else{
+                    <script src="/static/js/app.js"></script>
+                  }
+
+                  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="edfbd23d-29c4-4653-9b81-39082301040e" data-blockingmode="auto" type="text/javascript"></script>
+
+
+          </head>
+          <body>
+          { children... }
+          </body>
+        </html>
+}

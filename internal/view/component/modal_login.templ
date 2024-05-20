@@ -1,0 +1,46 @@
+package component
+
+templ ModalLogin(){
+              <!-- Modal Structure -->
+	    <div id="modal-login" class="modal appcolor-text text-type-dark">
+		<div class="modal-content">
+                <img class="modal-login-img" src="./static/img/sign_in_img.png" alt=""/>
+		<h3 class="modal-login-title">Please sign in</h3>
+		<br/>
+		<br/>
+
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+		<div id="google_signin_button">
+
+		  <div id="g_id_onload"
+		       data-client_id="311450763505-5srjnc3n5g7oh72mpea4neht497o66uc.apps.googleusercontent.com"
+		       data-context="signin"
+		       data-ux_mode="popup"
+		       data-login_uri="oauth"
+		       data-auto_prompt="false">
+		  </div>
+
+		  <div class="g_id_signin"
+		       data-type="standard"
+		       data-shape="pill"
+		       data-theme="filled_blue"
+		       data-text="signin_with"
+		       data-size="large"
+		       data-logo_alignment="left">
+		  </div>
+
+		</div>
+
+		<br/>
+		<br/>
+
+
+
+                </div>
+
+
+
+		<br/>
+	      </div>
+}

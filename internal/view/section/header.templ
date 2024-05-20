@@ -1,0 +1,48 @@
+package section
+
+templ Header(isLoggedIn bool, userName string){
+                
+                 
+                <nav>
+                <div class="nav-wrapper">
+                <a class="brand-logo" href=""><img src="/static/img/logo.png" alt=""/></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">        <i class="large material-icons appcolor-text text-type-dark">menu</i></a>
+                
+                <ul id="nav-mobile" class="hide-on-med-and-down right">
+
+                if isLoggedIn{
+                <li><a  href="#modal-settings" class="header-settings-btn waves-effect waves-light btn-small   appcolor-text text-type-light">settings<i class="material-icons right">settings</i></a></li>
+                <li><a href="#" class="header-logout-btn waves-effect waves-light btn-small   appcolor-text text-type-light">sign out<i class="material-icons right">logout</i></a></li>
+
+                }else{
+                <li><a href="#modal-login" class="appcolor logo-main waves-effect waves-light btn-small modal-trigger  appcolor-text text-type-light">sign in<i class="material-icons right">login</i></a></li>
+                }
+
+                </ul>
+                
+                
+                
+                </div>
+                </nav>
+
+                <ul id="mobile-demo" class="sidenav">
+
+                if isLoggedIn{
+                <li><a  href="#modal-settings" class="header-settings-btn waves-effect waves-light btn-small  appcolor-text text-type-light">settings <i class="material-icons right appcolor-text text-type-light mobile-material">settings</i></a></li>
+                <li><a href="#" class="header-logout-btn waves-effect waves-light btn-small   appcolor-text text-type-light">sign out<i class="material-icons right appcolor-text text-type-light mobile-material">logout</i></a></li>
+                }else{
+                <li><a href="#modal-login" class="appcolor logo-main waves-effect waves-light btn-small modal-trigger  appcolor-text text-type-light">sign in<i class="material-icons right appcolor-text text-type-light mobile-material">login</i></a></li>
+
+                }
+                </ul>
+ 
+                if isLoggedIn{
+                <h1 class="appcolor-text text-type-dark" id="app-home-header">{userName}, ready to change your life?</h1>
+                }else{
+                <h1 class="appcolor-text text-type-dark" id="app-home-header">Become happy and confident with affirmations.</h1>
+                }
+                <p id="app-home-paragraph" class="appcolor-text text-type-dark">Click on a card below to start improving yourself.</p>
+
+
+
+    }

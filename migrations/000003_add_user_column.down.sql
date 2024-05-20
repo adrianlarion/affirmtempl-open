@@ -1,0 +1,2 @@
+ALTER TABLE user DROP COLUMN auth;
+ALTER TABLE user DROP COLUMN meta;
