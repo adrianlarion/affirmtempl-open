@@ -5,8 +5,7 @@ The code is by no means perfect, although I tried to keep it as clean as possibl
 I've used Echo and Templ on backend, materialize.css and jQuery on frontend.
 
 Feel free to modify it and improve it as you see fit.
-You can see it in action and use it here:
-https://easyaffirm.com/
+
 
 ![](./docs/screenshot1.png)
 
